@@ -12,6 +12,7 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="../../static/css/style.css">
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -21,10 +22,7 @@
 <!-- nav bar start here -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Download Video from youtube</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -47,9 +45,7 @@
 <!-- container start here -->
 <br><br><br><br>
 <div class="container">
-
-    <br><br>
-    <center><h1> Pastekan Link video Youtube disini</h1></center>
+    <center><h1 class="mt--5 link"> Pastekan Link video Youtube disini</h1></center>
     <!-- form start here -->
     <form method="post">
         {% csrf_token %}
@@ -65,8 +61,10 @@
         </center>
     </form>
     <!-- form end here -->
+    <!-- gua tambahin codenya disini -->
+    <div class="bungkus-download mt-4">
 
-    {% if yobj %}
+        {% if yobj %}
 
         <strong><h1 style="text-align: center; margin-bottom: 30px; margin-top: 50px;">
             {{ yobj.title }}
@@ -144,6 +142,10 @@
 
 
 </div>
+
+    </div>
+    <!-- akhir code tambahan -->
+    
 
 <!-- container end here -->
 
